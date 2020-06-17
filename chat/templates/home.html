@@ -6,5 +6,7 @@
     <input type="text" name="login" placeholder="Login" />
     <button type="submit">Entrar</button>
     {% csrf_token %}
+    <br />
+    {% if error %} {{ error }} {% endif %}
   </form>
 {% endblock home %}
