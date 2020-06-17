@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
 {% block home %}
-  <h1>Olá</h1>
+  <h1>Entrar</h1>
+  <form action="" method="post">
+    <input type="text" name="login" placeholder="Login" />
+    <button type="submit">Entrar</button>
+    {% csrf_token %}
+  </form>
 {% endblock home %}
