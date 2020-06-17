@@ -3,7 +3,8 @@
 {% block chat %}
     <h1>Mensagens</h1>
     <h3>Oi, {{user.get_username }}</h3>
-    <form action="" method="post">
+
+    <form action="{% url 'add_message' %}" method="post">
         <input type="text" name="message" placeholder="Digite aqui" />
         <button type="submit">Enviar</button>
         {% csrf_token %}

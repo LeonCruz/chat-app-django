@@ -13,8 +13,6 @@ def home(request):
         if user is not None:
             login(request, user)
             return redirect('/chat/')
-        else:
-            Http404()
             
     return render(request, 'home.html')
 
@@ -25,7 +23,7 @@ def add_message(request):
     if message != '':
         Message.objects.create(body=message, time=timezone.now())
 
-    return redirect('chat')
+    return redirect('/chat/')
 
 
 def chat(request):
