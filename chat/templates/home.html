@@ -1,9 +1,5 @@
 {% extends 'base.html' %}
 
-{% block list_messages %}
-    {% if messages %}
-        {% for msg in messages %}
-            <p> {{ msg.body }} {{ msg.time }} </p>
-        {% endfor %}
-    {% endif %}
-{% endblock %}
+{% block home %}
+  <h1>Olá</h1>
+{% endblock home %}

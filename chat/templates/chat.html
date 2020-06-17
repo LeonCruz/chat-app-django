@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block chat %}
+    <form action="" method="post">
+        <input type="text" name="message" placeholder="Digite aqui" />
+        <button type="submit">Enviar</button>
+        {% csrf_token %}
+    </form>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <p> {{ msg.body }} {{ msg.time }} </p>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

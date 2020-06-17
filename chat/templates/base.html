@@ -8,14 +8,11 @@
 <body>
     <h1>Chat App</h1>
     
-    <form action="" method="post">
-        <input type="text" name="message" placeholder="Digite aqui" />
-        <button type="submit">Enviar</button>
-        {% csrf_token %}
-    </form>
+    {% block home %}
+    {% endblock home %}
 
-    {% block list_messages %}
-    {% endblock list_messages %}
+    {% block chat %}
+    {% endblock chat %}
     
 </body>
 </html>
