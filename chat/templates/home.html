@@ -1,13 +1,9 @@
-<h1>Olá, mundo</h1>
+{% extends 'base.html' %}
 
-<form action="" method="post">
-    <input type="text" name="message" placeholder="Digite aqui" />
-    <button type="submit">Enviar</button>
-    {% csrf_token %}
-</form>
-
-{% if messages %}
-    {% for msg in messages %}
-        <p> {{ msg.body }} </p>
-    {% endfor %}
-{% endif %}
+{% block list_messages %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p> {{ msg.body }} </p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
